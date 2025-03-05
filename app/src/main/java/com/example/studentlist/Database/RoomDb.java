@@ -37,7 +37,8 @@ public abstract class RoomDb extends RoomDatabase
                 Executors.newSingleThreadExecutor().submit(()->{
                    userDao.insertAll(new User("Maverick","Cagne","+639318992301","mav","user"));
                    appointmentDao.insertAll(new Appointment("ToothChange","04/04/2025","12:00 PM","Pending","Masakit ngipin ko"));
-
+                    appointmentDao.insertAll(new Appointment("ToothChange","04/04/2025","12:00 PM","Undone","Masakit ngipin ko"));
+                    appointmentDao.insertAll(new Appointment("ToothChange","04/04/2025","12:00 PM","Done","Masakit ngipin ko"));
                 });
 
             }

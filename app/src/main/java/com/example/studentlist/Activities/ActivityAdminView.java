@@ -12,6 +12,7 @@ import com.example.studentlist.R;
 
 public class ActivityAdminView extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

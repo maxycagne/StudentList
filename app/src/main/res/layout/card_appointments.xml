@@ -69,6 +69,15 @@
                 android:text="02:00pm"
                 android:textSize="16sp" />
 
+            <TextView
+                android:id="@+id/txtdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Click to view appoitment"
+                android:layout_marginLeft="210dp"
+                android:textSize="10sp"/>
+
 
 
         </LinearLayout>

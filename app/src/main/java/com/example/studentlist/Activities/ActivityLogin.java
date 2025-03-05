@@ -49,7 +49,8 @@ public class ActivityLogin extends AppCompatActivity {
 
 
         root.buttonLogin.setOnClickListener(v->{
-            login();
+            //login();
+            startActivity(new Intent(this,ActivityDashboard.class));
 
         });
 

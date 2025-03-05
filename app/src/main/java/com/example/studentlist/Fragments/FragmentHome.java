@@ -1,7 +1,10 @@
 package com.example.studentlist.Fragments;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
@@ -9,8 +12,10 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.studentlist.Activities.ActivityDashboard;
+import com.example.studentlist.Activities.ActivityView;
 import com.example.studentlist.Adapter.AppointmentAdapter;
 import com.example.studentlist.Database.Dao.AppointmentDao;
 import com.example.studentlist.Database.DbHelper;
@@ -30,6 +35,10 @@ public class FragmentHome extends Fragment {
     private DbHelper dbHelper;
     private Handler handler;
 
+    private String status;
+
+
+
     public void setDb()
     {
         dbHelper = new DbHelper(getContext());
@@ -44,7 +53,7 @@ public class FragmentHome extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        retriveAppointment();
     }
 
     @Override
@@ -52,11 +61,11 @@ public class FragmentHome extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         root = FragmentFragmentHomeBinding.inflate(inflater,container,false);
-
+        retriveAppointment();
         setDb();
 
 
-        retriveAppointment();
+
         return root.getRoot();
     }
 
@@ -64,8 +73,6 @@ public class FragmentHome extends Fragment {
     {
         Executors.newSingleThreadExecutor().submit(()->
         {
-
-
             AppointmentDao appointmentDao = ((ActivityDashboard)getActivity()).getDbHelper().getAppointmentDao();
             List<Appointment> appointmentList = appointmentDao.getAll();
 
@@ -87,7 +94,7 @@ public class FragmentHome extends Fragment {
                     AppointmentAdapter adapter = new AppointmentAdapter(getContext(), appointmentList, new AppointmentAdapter.AppointmentClick() {
                         @Override
                         public void Onclick(Appointment appointment) {
-
+                            startActivity(new Intent(getContext(), ActivityView.class).putExtra("id",appointment.getId()));
                         }
                     });
 
@@ -95,8 +102,10 @@ public class FragmentHome extends Fragment {
                 }
             });
         });
-
     }
+
+
+
 
     @Override
     public void onResume() {
@@ -104,5 +113,6 @@ public class FragmentHome extends Fragment {
 
         retriveAppointment();
     }
+
 
 }

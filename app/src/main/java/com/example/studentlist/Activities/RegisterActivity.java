@@ -73,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             handler.post(() -> {
                 if (existingUser != null) {
-                    Toast.makeText(RegisterActivity.this, "User phone number is already registered", Toast.LENGTH_SHORT).show();
+                    handler.post(() -> Toast.makeText(this, "Date not available, please choose another date", Toast.LENGTH_SHORT).show());
                 }
                 else {
                     User user = new User(firstName, lastName, phoneNum, password, priv);

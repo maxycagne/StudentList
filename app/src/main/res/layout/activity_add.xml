@@ -75,7 +75,7 @@
             app:helperTextTextColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtFirstName"
+                android:id="@+id/txtAppointmentName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/baseline_edit_24"
@@ -102,9 +102,10 @@
                 android:drawableStart="@drawable/baseline_calendar_month_24"
                 android:fontFamily="@font/montserrat_medium"
                 android:hint="Date"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:inputType="date"
+
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true"
                 />
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txtTimeLayout"
@@ -122,9 +123,9 @@
                     android:drawableStart="@drawable/baseline_access_time_24"
                     android:fontFamily="@font/montserrat_medium"
                     android:hint="Time"
-                    android:maxLines="1"
-                    android:inputType="time"
-                    android:singleLine="true" />
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false" />
             </com.google.android.material.textfield.TextInputLayout>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -165,7 +166,7 @@
                 android:layout_marginEnd="10dp"/>
 
             <Button
-                android:id="@+id/buttonDelete"
+                android:id="@+id/buttonDone"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="Done"

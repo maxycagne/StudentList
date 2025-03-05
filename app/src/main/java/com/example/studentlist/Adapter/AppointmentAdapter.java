@@ -31,6 +31,7 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
 
     public interface AppointmentClick{
         void Onclick(Appointment appointment);
+
     }
 
     public void refreshList(Context context)
@@ -57,7 +58,10 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
         holder.root.textDate.setText(appointment.getDate());
         holder.root.textTime.setText(appointment.getTime());
         holder.root.textStatus.setText(appointment.getStatus());
-        holder.root.textDescription.setText(appointment.getDesc());
+
+        holder.itemView.setOnClickListener(v -> {
+           appointmentClick.Onclick(appointment);
+        });
 
         holder.itemView.startAnimation(animation);
 
