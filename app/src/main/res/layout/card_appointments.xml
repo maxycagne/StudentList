@@ -57,7 +57,7 @@
                 android:id="@+id/textDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/montserrat_semibold"
                 android:text="02/12/2025"
                 android:textSize="16sp"/>
 
@@ -65,54 +65,11 @@
                 android:id="@+id/textTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/montserrat_semibold"
                 android:text="02:00pm"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/textDescriptionNoEdit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="Description:"
-                android:textSize="16sp"
-                android:layout_marginTop="10dp"/>
 
-            <TextView
-                android:id="@+id/textDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                android:textSize="16sp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:padding="10dp"
-                android:layout_marginTop="10dp">
-
-                <Button
-                    android:id="@+id/buttonEdit"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/accent"
-                    android:text="Edit"
-                    android:textColor="@color/white"
-                    android:layout_marginEnd="10dp"/>
-
-                <Button
-                    android:id="@+id/buttonDelete"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:text="Done"
-                    android:backgroundTint="@color/secondary"
-                    android:textColor="@color/white"
-                    />
-
-            </LinearLayout>
 
         </LinearLayout>
 

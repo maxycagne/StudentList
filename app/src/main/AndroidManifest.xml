@@ -13,6 +13,9 @@
         android:theme="@style/Theme.StudentList"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.ActivityView"
+            android:exported="false" />
+        <activity
             android:name=".Activities.ActivityAdd"
             android:exported="false" />
         <activity
