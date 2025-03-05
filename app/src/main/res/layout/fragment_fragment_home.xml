@@ -14,24 +14,19 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
+            app:boxStrokeColor="@color/accent"
+            android:id="@+id/textFilterLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtPhoneNumber"
+            <AutoCompleteTextView
+                android:id="@+id/textFilter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_search_24"
-                android:fontFamily="@font/montserrat_medium"
-                android:hint=" Search"
-                android:inputType="phone"
-                android:singleLine="true" />
+                android:hint="Filter"
+                android:fontFamily="@font/montserrat_medium"/>
         </com.google.android.material.textfield.TextInputLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvAppointment"
