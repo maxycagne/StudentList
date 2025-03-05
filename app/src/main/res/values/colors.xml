@@ -6,7 +6,7 @@
     <color name="secondary">#D7002E</color>
 
 
-    <color name="pending">#D7002E</color>
+    <color name="pending">#FFA300</color>
     <color name="undone">#006AFF</color>
     <color name="done">#4E4E4E</color>
 </resources>
