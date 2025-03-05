@@ -135,7 +135,8 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:hint=" Password"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -154,7 +155,8 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:hint=" Confirm Password"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
