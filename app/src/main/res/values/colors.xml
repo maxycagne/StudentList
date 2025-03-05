@@ -9,4 +9,6 @@
     <color name="pending">#FFA300</color>
     <color name="undone">#006AFF</color>
     <color name="done">#4E4E4E</color>
+    <color name="green">#1CBD00</color>
+
 </resources>
