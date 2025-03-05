@@ -4,4 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="accent">#006AFF</color>
     <color name="secondary">#D7002E</color>
+
+
+    <color name="pending">#D7002E</color>
+    <color name="undone">#006AFF</color>
+    <color name="done">#4E4E4E</color>
 </resources>
