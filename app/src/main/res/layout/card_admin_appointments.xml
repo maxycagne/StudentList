@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@color/accent"
+            android:background="@color/primary"
             android:padding="15dp">
 
             <androidx.cardview.widget.CardView
@@ -37,53 +37,61 @@
             </androidx.cardview.widget.CardView>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/accent"
+                android:background="@color/primary"
                 android:orientation="vertical"
-               >
+                android:layout_weight="1">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textAppointmentName"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+
                         android:fontFamily="@font/montserrat_semibold"
                         android:padding="5dp"
                         android:text="Appointment Name"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/textStatus"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="Undone"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
-
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/texName"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:padding="5dp"
-                    android:text="Jetro Damaso"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/texName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="5dp"
+                        android:text="Jetro Damaso"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Undone"
+                android:textColor="@color/undone"
+                android:textSize="14sp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -104,22 +112,47 @@
                     android:orientation="vertical"
                     android:layout_weight="1">
 
-                    <TextView
-                        android:id="@+id/textDate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_semibold"
-                        android:text="02/12/2025"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/textTime"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_semibold"
-                        android:text="02:00pm"
-                        android:textSize="16sp" />
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
+                        <TextView
+                            android:id="@+id/textDateNoEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Date: "
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="02/12/2025"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/textTimeNoEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Time: "
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/textTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="02:00pm"
+                            android:textSize="16sp" />
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -146,8 +179,8 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="Confirm"
-                    android:backgroundTint="@color/green"
-                    android:textColor="@color/black" />
+                    android:backgroundTint="@color/secondary"
+                    android:textColor="@color/sixty" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

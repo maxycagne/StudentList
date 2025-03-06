@@ -14,7 +14,8 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            app:boxStrokeColor="@color/accent"
+            app:hintTextColor="@color/primary"
+            app:boxStrokeColor="@color/primary"
             android:id="@+id/textFilterLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,6 +26,7 @@
                 android:id="@+id/textFilter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@color/primary"
                 android:hint="Filter"
                 android:fontFamily="@font/montserrat_medium"/>
         </com.google.android.material.textfield.TextInputLayout>

@@ -5,26 +5,30 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.MainActivity"
     android:background="@color/white"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/dentist_logo"
-        android:layout_gravity="center"/>
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".Activities.MainActivity">
 
     <TextView
-        android:id="@+id/txtTitle"
+        android:id="@+id/txtTitle1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_extrabold"
-        android:text="Donald's Dentistry"
-        android:textSize="24sp"
+        android:layout_marginBottom="-17dp"
+        android:fontFamily="@font/montserrat_semibold"
         android:gravity="center"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="-10dp"/>
+        android:text="Donald's"
+        android:textColor="@color/primary"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/txtTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:text="Dentistry"
+        android:textColor="@color/primary"
+        android:textSize="32sp"/>
 </LinearLayout>

@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/baseline_arrow_back_ios_24"
-                app:tint="@color/accent" />
+                app:tint="@color/secondary" />
 
             <TextView
                 android:id="@+id/textView"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
                 android:text="Back"
-                android:textColor="@color/accent" />
+                android:textColor="@color/secondary" />
         </LinearLayout>
 
         <TextView
@@ -51,7 +51,8 @@
             android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
             android:text="Add Content"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/primary"/>
 
     </FrameLayout>
 
@@ -66,13 +67,13 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
 
         <com.google.android.material.textfield.TextInputLayout
+            app:hintTextColor="@color/primary"
             android:id="@+id/txtAppointmentNameLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            app:helperText="*Required"
-            app:helperTextTextColor="@color/white">
+            app:boxStrokeColor="@color/secondary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtAppointmentName"
@@ -86,13 +87,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            app:hintTextColor="@color/primary"
             android:id="@+id/txtDateLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            app:helperText="*Required"
-            app:helperTextTextColor="@color/white">
+            app:boxStrokeColor="@color/secondary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
@@ -108,13 +109,13 @@
                 android:clickable="true"
                 />
             <com.google.android.material.textfield.TextInputLayout
+                app:hintTextColor="@color/primary"
                 android:id="@+id/txtTimeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                app:helperText="*Required"
-                app:helperTextTextColor="@color/white">
+                app:boxStrokeColor="@color/secondary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtTime"
@@ -130,12 +131,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            app:hintTextColor="@color/primary"
             android:id="@+id/txtDescripionLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            app:boxStrokeColor="@color/accent">
+            app:boxStrokeColor="@color/secondary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtDescription"
@@ -153,14 +155,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:padding="10dp"
-            android:layout_margin="10dp">
+            android:padding="10dp">
 
             <Button
                 android:id="@+id/buttonClear"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/primary"
                 android:text="Clear"
                 android:textColor="@color/white"
                 android:layout_marginEnd="10dp"/>
@@ -170,7 +171,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="Done"
-                android:backgroundTint="@color/accent"
+                android:backgroundTint="@color/secondary"
                 android:textColor="@color/white"
                 />
 

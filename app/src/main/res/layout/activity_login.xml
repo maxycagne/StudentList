@@ -16,27 +16,50 @@
         android:padding="20dp"
         >
 
-        <TextView
-            android:id="@+id/txtTitle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_extrabold"
-            android:text="Donald's Dentistry"
-            android:textSize="32sp"
-            android:gravity="center"
-            android:layout_marginBottom="20dp"
-            android:textColor="@color/black"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtTitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center|start"
+                android:text="Donald's"
+                android:textColor="@color/primary"
+                android:textSize="60sp"
+                android:layout_marginBottom="-30dp"/>
+            <TextView
+                android:id="@+id/txtTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center|start"
+                android:text="Dentistry"
+                android:textColor="@color/primary"
+                android:textSize="60sp" />
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             app:prefixText="+639"
-            app:counterEnabled="true"
-            app:counterMaxLength="9">
+            app:counterMaxLength="9"
+            app:prefixTextColor="@color/primary"
+            app:boxStrokeColor="@color/primary"
+            app:hintTextColor="@color/primary"
+            app:placeholderTextColor="@color/primary">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:textColorHighlight="@color/primary"
+                android:textColorHint="@color/primary"
+                android:textColor="@color/primary"
+                android:textColorLink="@color/primary"
                 android:singleLine="true"
                 android:id="@+id/txtPhoneNumber"
                 android:layout_width="match_parent"
@@ -53,6 +76,9 @@
             android:layout_gravity="center"
             android:gravity="center"
             app:passwordToggleEnabled="true"
+            app:boxStrokeColor="@color/primary"
+            android:layout_marginBottom="-10dp"
+            app:hintTextColor="@color/primary"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -74,14 +100,14 @@
             android:layout_margin="20dp"
             android:fontFamily="@font/montserrat_semibold"
             android:text="Login"
-            android:backgroundTint="@color/accent"/>
+            android:backgroundTint="@color/secondary"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="-20dp">
+            android:layout_marginTop="-15dp">
 
             <TextView
                 android:id="@+id/textView4"
@@ -97,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:fontFamily="@font/montserrat_semibold"
-                android:textColor="@color/accent"/>
+                android:textColor="@color/secondary"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

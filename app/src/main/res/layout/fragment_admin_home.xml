@@ -14,7 +14,8 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            app:boxStrokeColor="@color/accent"
+            app:hintTextColor="@color/primary"
+            app:boxStrokeColor="@color/primary"
             android:id="@+id/textFilterLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,7 +23,9 @@
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
             <AutoCompleteTextView
+
                 android:id="@+id/textFilter"
+                android:textColorHint="@color/primary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Filter"

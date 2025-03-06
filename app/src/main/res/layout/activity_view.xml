@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.ActivityView">
+    tools:context=".Activities.ActivityView"
+    android:background="@color/sixty">
     <FrameLayout
         android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
@@ -30,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/baseline_arrow_back_ios_24"
-                app:tint="@color/accent" />
+                app:tint="@color/secondary" />
 
             <TextView
                 android:id="@+id/textView"
@@ -38,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
                 android:text="Back"
-                android:textColor="@color/accent" />
+                android:textColor="@color/secondary" />
         </LinearLayout>
 
         <TextView
@@ -49,7 +50,8 @@
             android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
             android:text="View Appointment"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textColor="@color/primary"/>
 
     </FrameLayout>
 
@@ -68,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="@color/accent"
+            app:cardBackgroundColor="@color/primary"
             >
 
             <LinearLayout
@@ -207,7 +209,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="Confirm"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/secondary"
                 android:textColor="@color/white"
                 />
 

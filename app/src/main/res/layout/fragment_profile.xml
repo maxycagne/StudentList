@@ -82,7 +82,7 @@
             android:layout_margin="20dp"
             app:cardElevation="5dp"
             app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="@color/accent"
+            app:cardBackgroundColor="@color/primary"
             android:elevation="5dp">
 
             <LinearLayout
@@ -117,7 +117,7 @@
         android:id="@+id/buttonCancel"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/secondary"
         android:text="Edit Profile"
         android:textColor="@color/white"
         android:layout_marginTop="-15dp"

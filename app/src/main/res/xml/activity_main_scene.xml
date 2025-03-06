@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="2525">
+       <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/txtTitle1"
+               motion:framePosition="40"
+               motion:keyPositionType="deltaRelative" />
+           <KeyPosition
+               motion:motionTarget="@+id/txtTitle1"
+               motion:framePosition="76"
+               motion:keyPositionType="deltaRelative" />
+           <KeyPosition
+               motion:motionTarget="@+id/txtTitle1"
+               motion:framePosition="29"
+               motion:keyPositionType="deltaRelative" />
+       </KeyFrameSet>
+        <OnSwipe motion:maxAcceleration="0.1" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start" ></ConstraintSet>
+    <ConstraintSet android:id="@+id/end" >
+        <Constraint
+            android:id="@+id/txtTitle1"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-15dp"
+            motion:layout_constraintBottom_toTopOf="@+id/txtTitle2"
+            motion:layout_constraintVertical_bias="0.966"
+            android:visibility="visible"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+</MotionScene>
